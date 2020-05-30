@@ -1,0 +1,194 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scene_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0F0F0F"
+    android:orientation="vertical"
+    tools:context=".PerformanceActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5"
+        android:padding="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/scene_root"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/scene_root"
+        android:layout_width="match_parent"
+        android:background="@color/colorPrimary"
+        android:elevation="4dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/imageValueLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="This image calculated values is:"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/imageValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorBackground"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageValueLabel"
+            tools:text="Calculating" />
+
+        <TextView
+            android:id="@+id/imageSizeLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Image Size"
+            android:textColor="@android:color/white"
+            android:textSize="20dp"
+            app:layout_constraintEnd_toStartOf="@id/oneTimeLabel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageValue" />
+
+        <TextView
+            android:id="@+id/imageSizeCompat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorBackground"
+            android:textSize="20dp"
+            app:layout_constraintEnd_toEndOf="@+id/imageSizeLabel"
+            app:layout_constraintStart_toStartOf="@+id/imageSizeLabel"
+            app:layout_constraintTop_toBottomOf="@+id/imageSizeLabel"
+            android:text="854x480" />
+
+        <TextView
+            android:id="@+id/oneTimeValueCompat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorBackground"
+            android:textSize="20dp"
+            app:layout_constraintEnd_toEndOf="@+id/oneTimeLabel"
+            app:layout_constraintStart_toStartOf="@+id/oneTimeLabel"
+            app:layout_constraintTop_toBottomOf="@+id/oneTimeLabel"
+            tools:text="0.6 sec" />
+        <ProgressBar
+            android:id="@+id/progress_bar_1"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            app:layout_constraintRight_toRightOf="@id/oneTimeValueCompat"
+            app:layout_constraintLeft_toLeftOf="@id/oneTimeValueCompat"
+            app:layout_constraintBottom_toBottomOf="@id/oneTimeValueCompat"
+            app:layout_constraintTop_toTopOf="@id/oneTimeValueCompat" />
+        <TextView
+            android:id="@+id/imageSizeHD"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorBackground"
+            android:textSize="20dp"
+            app:layout_constraintEnd_toEndOf="@+id/imageSizeLabel"
+            app:layout_constraintStart_toStartOf="@+id/imageSizeLabel"
+            app:layout_constraintTop_toBottomOf="@+id/imageSizeCompat"
+            android:text="1280x720" />
+
+        <TextView
+            android:id="@+id/oneTimeValueHD"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorBackground"
+            android:textSize="20dp"
+            app:layout_constraintEnd_toEndOf="@+id/oneTimeLabel"
+            app:layout_constraintStart_toStartOf="@+id/oneTimeLabel"
+            app:layout_constraintTop_toBottomOf="@+id/oneTimeValueCompat"
+            tools:text="0.6 sec" />
+
+        <ProgressBar
+            android:id="@+id/progress_bar_2"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            app:layout_constraintRight_toRightOf="@id/oneTimeValueHD"
+            app:layout_constraintLeft_toLeftOf="@id/oneTimeValueHD"
+            app:layout_constraintBottom_toBottomOf="@id/oneTimeValueHD"
+            app:layout_constraintTop_toTopOf="@id/oneTimeValueHD" />
+
+        <TextView
+            android:id="@+id/imageSizeFULLHD"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorBackground"
+            android:textSize="20dp"
+            app:layout_constraintEnd_toEndOf="@+id/imageSizeLabel"
+            app:layout_constraintStart_toStartOf="@+id/imageSizeLabel"
+            app:layout_constraintTop_toBottomOf="@+id/imageSizeHD"
+            android:text="1920x1080" />
+
+        <TextView
+            android:id="@+id/oneTimeValueFULLHD"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorBackground"
+            android:textSize="20dp"
+            app:layout_constraintEnd_toEndOf="@+id/oneTimeLabel"
+            app:layout_constraintStart_toStartOf="@+id/oneTimeLabel"
+            app:layout_constraintTop_toBottomOf="@+id/oneTimeValueHD"
+            tools:text="0.6 sec" />
+
+        <ProgressBar
+            android:id="@+id/progress_bar_3"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            app:layout_constraintRight_toRightOf="@id/oneTimeLabel"
+            app:layout_constraintLeft_toLeftOf="@id/oneTimeLabel"
+            app:layout_constraintBottom_toBottomOf="@id/oneTimeValueFULLHD"
+            app:layout_constraintTop_toTopOf="@id/oneTimeValueFULLHD" />
+        <TextView
+            android:id="@+id/oneTimeLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Time to calculate one"
+            android:textColor="@android:color/white"
+            android:textSize="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/imageSizeLabel"
+            app:layout_constraintTop_toBottomOf="@+id/imageValue" />
+
+
+
+
+
+        <TextView
+            android:id="@+id/totalTimeLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:textSize="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/oneTimeValueFULLHD"
+            app:layout_constraintBottom_toTopOf="@+id/totalTimeValue"
+            android:text="Time for 1 minute of footage" />
+
+        <TextView
+            android:id="@+id/totalTimeValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="~36 sek"
+            android:textColor="@color/colorBackground"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

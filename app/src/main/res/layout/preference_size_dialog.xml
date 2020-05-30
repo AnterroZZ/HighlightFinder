@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_margin="16dp"
+    android:layout_height="match_parent">
+
+    <RadioGroup
+        android:checkedButton="@id/size_preference_hd"
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioButton
+            android:id="@+id/size_preference_compact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorText"
+            android:text="COMPACT 854x480" />
+
+        <RadioButton
+            android:id="@+id/size_preference_hd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorText"
+            android:text="HD 1280x720" />
+
+        <RadioButton
+            android:id="@+id/size_preference_fullhd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorText"
+            android:text="FULL HD 1920x1080" />
+
+        <RadioButton
+            android:id="@+id/size_preference_custom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorText"
+            android:text="CUSTOM" />
+
+    </RadioGroup>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup">
+
+        <EditText
+            android:id="@+id/size_preference_width"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Custom Width"
+            android:textColorHint="@color/colorText"
+            android:textColor="@color/colorText"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/size_preference_height"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Custom Height"
+            android:textColorHint="@color/colorText"
+            android:textColor="@color/colorText"
+            android:inputType="number" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

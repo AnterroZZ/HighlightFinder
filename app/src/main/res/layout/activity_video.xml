@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".VideoActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5"
+        android:background="@color/colorPrimaryDark">
+
+        <com.example.autoediting.CustomVideoPlayer
+            android:id="@+id/video_videoView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="muteUnmute"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:layout_weight="2"
+        android:layout_width="match_parent"
+        android:background="@color/colorPrimary"
+        android:layout_height="0dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/videoDuration"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" >
+
+            <TextView
+                android:id="@+id/video_videoDurationLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:text="Video Length"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/video_frameSamplingSizeLabel"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/video_videoDurationValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textColor="@color/colorBackground"
+                tools:text="45 sek"
+                app:layout_constraintTop_toBottomOf="@id/video_videoDurationLabel"
+                app:layout_constraintEnd_toStartOf="@id/video_frameSamplingSizeLabel"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/video_estimatedTimeLabel"
+                android:gravity="center"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:text="Estimated Calculation Time"
+                app:layout_constraintTop_toBottomOf="@id/video_videoDurationValue"
+                app:layout_constraintEnd_toStartOf="@id/video_frameSamplingSizeLabel"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/video_estimatedTimeValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textColor="@color/colorBackground"
+                tools:text="45 sek"
+                app:layout_constraintTop_toBottomOf="@id/video_estimatedTimeLabel"
+                app:layout_constraintEnd_toStartOf="@id/video_frameSamplingSizeLabel"
+                app:layout_constraintStart_toStartOf="parent" />
+            <ProgressBar
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:id="@+id/video_estimatedProgressBar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@+id/video_estimatedTimeValue"
+                app:layout_constraintTop_toTopOf="@id/video_estimatedTimeValue"
+                app:layout_constraintEnd_toEndOf="@id/video_estimatedTimeLabel"
+                app:layout_constraintStart_toStartOf="@id/video_estimatedTimeLabel"/>
+
+            <TextView
+                android:id="@+id/video_frameSamplingSizeLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:text="Frame Sampling Size"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@id/video_videoDurationLabel"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <TextView
+                android:id="@+id/video_frameSamplingSizeValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textColor="@color/colorBackground"
+                tools:text="1280x720"
+                app:layout_constraintTop_toBottomOf="@+id/video_frameSamplingSizeLabel"
+                app:layout_constraintStart_toEndOf="@id/video_videoDurationLabel"
+                app:layout_constraintEnd_toEndOf="parent" />
+            <TextView
+                android:id="@+id/video_differenceDetectionLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:text="Difference detection"
+                app:layout_constraintTop_toBottomOf="@+id/video_frameSamplingSizeValue"
+                app:layout_constraintStart_toEndOf="@id/video_videoDurationLabel"
+                app:layout_constraintBottom_toBottomOf="@+id/video_estimatedTimeLabel"
+                app:layout_constraintEnd_toEndOf="parent" />
+            <TextView
+                android:id="@+id/video_differenceDetectionValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorBackground"
+                android:textSize="20sp"
+                tools:text="0.3"
+                app:layout_constraintBottom_toBottomOf="@id/video_estimatedTimeValue"
+                app:layout_constraintTop_toTopOf="@+id/video_estimatedTimeValue"
+                app:layout_constraintStart_toEndOf="@id/video_videoDurationLabel"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Your video is already in auto edit"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/video_estimatedTimeValue" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorBackground"
+                android:text="We will notify you when we are done"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</LinearLayout>

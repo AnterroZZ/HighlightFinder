@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <com.example.autoediting.Preferences.FrameDifferencePreference
+        android:key="difference"
+        android:title="Frames difference"
+        app:allowDividerAbove="true"
+        app:allowDividerBelow="true"
+        app:iconSpaceReserved="false" />
+    <com.example.autoediting.Preferences.SampleDurationPreference
+        android:key="duration"
+        android:negativeButtonText="Cancel"
+        android:positiveButtonText="Change"
+        android:title="Sample video duration"
+        app:allowDividerAbove="true"
+        app:allowDividerBelow="true"
+        app:iconSpaceReserved="false"
+        />
+    <com.example.autoediting.Preferences.CutMinDurationPreference
+        android:key="one_cut"
+        android:negativeButtonText="Cancel"
+        android:positiveButtonText="Change"
+        android:title="One cut minimum time"
+        app:allowDividerAbove="true"
+        app:allowDividerBelow="true"
+        app:iconSpaceReserved="false"/>
+
+    <com.example.autoediting.Preferences.SizeCustomDialogPreference
+        android:dialogTitle="Change frame size"
+        android:key="size"
+        android:negativeButtonText="Cancel"
+        android:positiveButtonText="Change"
+        android:summary="Frame size used for calculations 1280x720"
+        android:title="Change frame size"
+        app:allowDividerAbove="true"
+        app:allowDividerBelow="true"
+        app:iconSpaceReserved="false"
+        app:title="Frame size" />
+    <EditTextPreference
+        android:key="save"
+        android:title="Save Path"
+        app:allowDividerAbove="true"
+        app:allowDividerBelow="true"
+        app:iconSpaceReserved="false" />
+    <Preference
+        android:key="about"
+        android:summary="Everything you need to know about app"
+        android:title="About"
+        app:allowDividerAbove="true"
+        app:allowDividerBelow="true"
+        app:iconSpaceReserved="false" />
+    <Preference
+        android:key="feedback"
+        android:summary="Tell us what you think!"
+        android:title="Send Feedback"
+        app:allowDividerAbove="true"
+        app:allowDividerBelow="true"
+        app:iconSpaceReserved="false" />
+    <Preference
+        android:key="version"
+        android:summary="Version 1.0.0"
+        android:title="Edith Version"
+        app:allowDividerAbove="true"
+        app:allowDividerBelow="true"
+        app:iconSpaceReserved="false"
+
+        />
+
+</PreferenceScreen>

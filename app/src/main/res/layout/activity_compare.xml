@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical"
+    tools:context=".CompareActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/image_1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="uploadImage1"
+            tools:src="@drawable/bccc109" />
+
+        <ImageView
+            android:id="@+id/image_2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="uploadImage2"
+            tools:src="@drawable/bccc109" />
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_margin="5dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:id="@+id/compare_calculated_value_label_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Calculated Value:"
+            android:textSize="20sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/compare_calculated_value_label_2"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ProgressBar
+            android:id="@+id/compare_progressbar_1"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            app:layout_constraintLeft_toLeftOf="@id/compare_calculated_value_label_1"
+            app:layout_constraintRight_toRightOf="@id/compare_calculated_value_label_1"
+            app:layout_constraintTop_toBottomOf="@id/compare_calculated_value_label_1" />
+
+        <TextView
+            android:id="@+id/compare_calculated_value_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorBackground"
+            android:textSize="20sp"
+            app:layout_constraintLeft_toLeftOf="@id/compare_calculated_value_label_1"
+            app:layout_constraintRight_toRightOf="@id/compare_calculated_value_label_1"
+            app:layout_constraintTop_toBottomOf="@id/compare_calculated_value_label_1"
+            tools:text="0.2222" />
+
+        <TextView
+            android:id="@+id/compare_calculated_value_label_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Calculated Value:"
+            android:textSize="20sp"
+            app:layout_constraintLeft_toRightOf="@id/compare_calculated_value_label_1"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ProgressBar
+            android:id="@+id/compare_progressbar_2"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            app:layout_constraintLeft_toLeftOf="@id/compare_calculated_value_label_2"
+            app:layout_constraintRight_toRightOf="@id/compare_calculated_value_label_2"
+            app:layout_constraintTop_toBottomOf="@id/compare_calculated_value_label_2" />
+
+        <TextView
+            android:id="@+id/compare_calculated_value_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorBackground"
+            android:textSize="20sp"
+            app:layout_constraintLeft_toLeftOf="@id/compare_calculated_value_label_2"
+            app:layout_constraintRight_toRightOf="@id/compare_calculated_value_label_2"
+            app:layout_constraintTop_toBottomOf="@id/compare_calculated_value_label_2"
+            tools:text="0.2222" />
+
+        <TextView
+            android:id="@+id/compare_difference_value_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Difference between these 2 is: "
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@id/compare_difference_value"
+            app:layout_constraintLeft_toLeftOf="@id/compare_difference_value"
+            app:layout_constraintRight_toRightOf="@id/compare_difference_value"
+            app:layout_constraintTop_toBottomOf="@id/compare_calculated_value_2" />
+
+        <TextView
+            android:id="@+id/compare_difference_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorBackground"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            tools:text="0.1233332" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

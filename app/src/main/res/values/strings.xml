@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">AutoEditing</string>
+
+    <!--    Upload Picture dialog-->
+    <string name="compare_two">Compare two photos</string>
+    <string name="choose_gallery">Choose from gallery</string>
+    <string name="cancel">Cancel</string>
+    <string name="start_menu_settings">Settings</string>
+    <string name="error_message">Oops! Something went terribly wrong</string>
+</resources>
