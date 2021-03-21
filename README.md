@@ -3,7 +3,7 @@
 ## What does the app do?
 It's super simple. You upload a video and wait for the app to find the highlights of your clip. All happens in the background! After the app
 is finished with editing your clip it will send you a notification with preview of what is has done! 
-There is also an option to check the performance of your phone in the app! ( You can see how does it work at this address: https://www.youtube.com/watch?v=T9ga001DOZE )
+There is also an option to check the performance of your phone in the app! ( You can see how performance check works at this address: https://www.youtube.com/watch?v=T9ga001DOZE )
 
 ## How does it work?
 It goes through all the individual simplified versions of frames and detects changes beetween them. 
